@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Ansible managed -->
+<!-- {{ ansible_managed }} -->
 <html>
   <head>
-      <title>Demo app - DEV</title>
+      <title>{{ g_app_title | default('Demo Application') }}</title>
   </head>
   <body>
     <h2>Create a new post</h2>
-    <form method="POST" action="https://api-dot-elemental-vent-367007.ue.r.appspot.com/submit">
+    <form method="POST" action="{{ g_api_end_point | default('/submit') }}">
       <div>
         <input type="text" name="name" placeholder="Name">
       </div>

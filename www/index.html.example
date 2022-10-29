@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<!-- Ansible managed -->
 <html>
   <head>
-      <title>Demo app - DEV</title>
+    <title>My App Engine App</title>
   </head>
   <body>
     <h2>Create a new post</h2>

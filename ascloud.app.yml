@@ -1,0 +1,4 @@
+ascloud_config:
+    templates:
+        - src: www/index.j2
+          dest: www/index.html

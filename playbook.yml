@@ -1,0 +1,21 @@
+- name: Application deployment
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  vars:
+    g_app_title: "Demo app - DEV"
+    g_api_end_point: "https://api-dot-elemental-vent-367007.ue.r.appspot.com/submit"
+
+  tasks:
+
+   - name: Clone the repository
+     debug:
+        var: ascloud_config.templates
+
+   - name: Generate templates
+     template:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+     loop: "{{ ascloud_config.templates | default([]) }}"
+     when: ascloud_config is defined and ascloud_config.templates is defined
