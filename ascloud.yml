@@ -1,3 +1,3 @@
 templates:
-  - src: www/index.j2
+  - src: templates/index.j2
     dest: www/index.html
