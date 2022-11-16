@@ -2,11 +2,11 @@
 <!-- {{ ansible_managed }} -->
 <html>
   <head>
-      <title>{{ g_app_title | default('Demo Application') }}</title>
+      <title>{{ g_app_title | default('Demo Front End') }}</title>
   </head>
   <body>
     <h2>Create a new post</h2>
-    <form method="POST" action="{{ g_api_end_point | default('/submit') }}">
+    <form method="POST" action="{{ g_api_end_point | default('/api/submit') }}">
       <div>
         <input type="text" name="name" placeholder="Name">
       </div>
