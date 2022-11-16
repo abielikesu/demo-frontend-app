@@ -38,6 +38,7 @@ div {
 </style>
   <body>
     <h2>Create a new post</h2>
+	<div>
     <form method="POST" action="{{ g_api_end_point | default('/api/submit') }}">
 		<label for="name">Nombre</label>
         <input type="text" id="name" name="name" placeholder="Name">
@@ -45,5 +46,6 @@ div {
         <input type:"text" id="message" name="message" placeholder="Message"></input>
         <input type="submit" value="Submit"></input>
     </form>
+	</div>
   </body>
 </html>
