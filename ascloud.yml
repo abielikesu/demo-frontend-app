@@ -1,3 +1,5 @@
 templates:
   - src: templates/index.j2
     dest: www/index.html
+  - src: templates/nginx.conf.j2
+    dest: config/nginx.conf
