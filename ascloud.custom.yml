@@ -1,13 +1,10 @@
-runtime: image
-image: nginx
+runtime: custom
+image: abielikesu/demo-front-end:latest
 templates:
   - src: templates/index.j2
     dest: www/index.html
   - src: templates/nginx.conf.j2
     dest: config/nginx/nginx.conf
-copy:
-  - src: www/index.html
-    dest: /usr/share/nginx/html/index.html
 configuration:
   - src: config/nginx/nginx.conf
     dest: /etc/nginx/conf.d/default.conf
