@@ -15,3 +15,32 @@ sudo docker cp config/nginx/nginx.conf demo-front-end:/etc/nginx/conf.d/default.
 # Start the application
 sudo docker container start demo-front-end
 ```
+
+# Run in Docker, using a Custom image
+```
+# Build the Custom image
+# It will have the html files and the NginX configuration
+sudo docker image build -t abielikesu/demo-front-end:v1.0 .
+
+# List images
+sudo docker image ls -a
+
+# Run the custom image
+sudo docker container run --detach --publish 8081:80 --name demo-front-end abielikesu/demo-front-end:v1.0
+```
+
+# Clean up
+```
+# Stop the application
+sudo docker container stop demo-front-end
+
+# Delete the container
+sudo docker container rm demo-front-end
+
+# Delete the custom image
+sudo docker image rm abielikesu/demo-front-end:v1.0
+
+# List images
+sudo docker image ls -a
+```
+
