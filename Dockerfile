@@ -4,7 +4,7 @@
 FROM nginx as final
 
 # Copy html files
-COPY www /usr/share/nginx/html
+COPY www/index.html /usr/share/nginx/html/index.html
 
 # Copy NginX configuration files
-COPY config/nginx /etc/nginx/conf.d
+COPY config/nginx/nginx.conf /etc/nginx/conf.d/default.conf
