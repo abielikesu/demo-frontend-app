@@ -47,5 +47,6 @@ div {
         <input type="submit" value="Submit">
     </form>
 	</div>
+    <h4>Host: {{ ansible_hostname | default('Web Server') }}</h4>
   </body>
 </html>
