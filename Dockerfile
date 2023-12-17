@@ -3,7 +3,7 @@
 #
 FROM nginx as final
 
-# Copy dist files
+# Copy html files
 COPY www /usr/share/nginx/html
 
 # Copy NginX configuration files
