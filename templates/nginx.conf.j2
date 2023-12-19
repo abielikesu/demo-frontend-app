@@ -1,7 +1,7 @@
 server {
     listen       80;
     listen  [::]:80;
-    server_name  {{ g_app_servername | default('localhost') }};
+    server_name  {{ g_app_server_name | default('localhost') }};
 
     access_log  /var/log/nginx/host.access.log  main;
 
