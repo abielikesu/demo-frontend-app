@@ -39,7 +39,7 @@ div {
   <body>
     <h2>Create a new post</h2>
 	<div>
-    <form method="POST" action="{{ g_api_end_point | default('/api/submit') }}">
+    <form method="POST" action="{{ g_api_base_path | default('/api') }}/submit">
 		<label for="lname">Nombre</label>
         <input type="text" id="lname" name="name" placeholder="Name">
 		<label for="lmsg">Mensaje</label>
